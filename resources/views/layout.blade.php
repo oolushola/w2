@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/boxicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/flaticon.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/boxicons.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/fonts/flaticon.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/odometer.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/responsive.css')}}">
     <title>@yield('title')</title>
     <link rel="icon" type="image/png" href="">
 </head>
@@ -50,20 +50,27 @@
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle active">Home</a>
-                            </li>
-                           
-                            <li class="nav-item">
-                                <a href="about.html" class="nav-link">About</a>
+                                <a href="{{ URL('/') }}" class="nav-link dropdown-toggle">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Our Strengths</a>
+                                <a href="{{URL('about')}}" class="nav-link">About</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Learn</a>
+                                <a href="#" class="nav-link dropdown-toggle">Join <i class='bx bx-chevron-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="services.html" class="nav-link">Transporter</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="service-details.html" class="nav-link">Individual</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact</a>
+                                <a href="{{ URL('blog') }}" class="nav-link dropdown-toggle">Learn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ URL('contact-us') }}" class="nav-link">Contact</a>
                             </li>
                         </ul>
                         <div class="side-nav">
@@ -330,20 +337,20 @@
     </div>
 
     <!-- Essential JS -->
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/contact-form-script.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/jquery.meanmenu.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/progressbar.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ URL::asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/form-validator.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/contact-form-script.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery.meanmenu.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/odometer.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery.appear.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/progressbar.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/custom.js') }}"></script>
 </body>
 </html>

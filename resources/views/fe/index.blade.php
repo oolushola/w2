@@ -39,6 +39,7 @@
             </ul>
         </div>
     </div>
+    
     <!-- End Banner -->
 
     <!-- Feature -->
@@ -48,21 +49,21 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="feature-item">
                         <i class="flaticon-truck-1"></i>
-                        <h3>Modern equipment</h3>
+                        <h3>Modern Truck Equipment</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="feature-item">
                         <i class="flaticon-insight"></i>
-                        <h3>Strong customer focus</h3>
+                        <h3>Strong Customer Focus</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
                     <div class="feature-item">
                         <i class="flaticon-delivery-truck"></i>
-                        <h3>On time delivery</h3>
+                        <h3>On Time Delivery</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="about-img">
-                        <img src="assets/img/home-two/inner_service.png" alt="About">
+                        <img src="assets/img/inner_service.png" alt="About">
                     </div>
                     <div class="year">
                         <h2>2</h2>
@@ -148,36 +149,36 @@
                     <div class="counter-item">
                         <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                         <h3>
-                            <span class="odometer" data-count="99">00</span> 
+                            <span class="odometer" data-count="4520">00</span> 
                         </h3>
-                        <p>Vehicles</p>
+                        <p>Successful Cargo Deliveries</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="counter-item">
                         <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                         <h3>
-                            <span class="odometer" data-count="420">00</span> 
+                            <span class="odometer" data-count="18">00</span> 
                         </h3>
-                        <p>Active customer</p>
+                        <p>Happy Clients</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="counter-item">
                         <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                         <h3>
-                            <span class="odometer" data-count="107">00</span> 
+                            <span class="odometer" data-count="1590">00</span> 
                         </h3>
-                        <p>Team member</p>
+                        <p>Trucks</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="counter-item">
                         <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                         <h3>
-                            <span class="odometer" data-count="19">00</span> 
+                            <span class="odometer" data-count="2">00</span> 
                         </h3>
-                        <p>Years experience</p>
+                        <p>Years Hands On Experience</p>
                     </div>
                 </div>
             </div>
@@ -191,8 +192,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="work-left">
-                        <h2>How it works</h2>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</span>
+                        <h2>Who we are</h2>
+                        <span>We are a technology enabled logistics and supply chain solutions company that offers superior value services to both transporters and cargo owners. </span>
                         <ul>
                             <li>
                                 <i class="flaticon-transport"></i>
@@ -201,12 +202,12 @@
                             </li>
                             <li>
                                 <i class="flaticon-credit-card"></i>
-                                <h3>Transparent pricing</h3>
+                                <h3>Cargo Aggregation</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
                             </li>
                             <li>
                                 <i class="flaticon-international-delivery"></i>
-                                <h3>International delivery</h3>
+                                <h3>Local & Up Country Deliveries</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
                             </li>
                         </ul>
@@ -335,35 +336,6 @@
         </div>
     </section>
     <!-- End Work -->
-
-    <!-- Logo -->
-    <div class="logo-area ptb-100">
-        <div class="container">
-            <div class="logo-slider owl-theme owl-carousel">
-                <div class="logo-item">
-                    <img src="assets/img/home-one/logo1.png" alt="Logo">
-                </div>
-                <div class="logo-item">
-                    <img src="assets/img/home-one/logo2.png" alt="Logo">
-                </div>
-                <div class="logo-item">
-                    <img src="assets/img/home-one/logo3.png" alt="Logo">
-                </div>
-                <div class="logo-item">
-                    <img src="assets/img/home-one/logo4.png" alt="Logo">
-                </div>
-                <div class="logo-item">
-                    <img src="assets/img/home-one/logo5.png" alt="Logo">
-                </div>
-                <div class="logo-item">
-                    <img src="assets/img/home-one/logo6.png" alt="Logo">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Logo -->
-
-
 
     <!-- Client -->
     <section class="client-area two ptb-100">

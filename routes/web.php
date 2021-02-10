@@ -12,3 +12,16 @@
 */
 
 Route::get('/', 'FrontendController@index');
+Route::get('about', 'FrontendController@aboutKaya');
+Route::get('blog', 'FrontendController@blogList');
+Route::get('blog-details', 'FrontendController@blogDetails');
+Route::get('contact-us', 'FrontendController@contact');
+
+
+// Backend Naviagtions
+Route::get('login', 'AdminController@login');
+Route::get('admin/dashboard', 'AdminController@dashboard');
+Route::get('admin/company-profile', 'CompanyProfileController@index');
+Route::resource('admin/testimonial', 'FeedbackController');
+Route::resource('admin/site-application', 'SiteApplicationController');
+Route::resource('admin/services', 'ServicesController');
