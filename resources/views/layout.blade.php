@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <link rel="stylesheet" href="{{URL::asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/meanmenu.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/boxicons.min.css')}}">
@@ -19,6 +20,7 @@
     <link rel="icon" type="image/png" href="">
 </head>
 <body>
+    
     <!-- Preloader -->
     <div class="loader">
         <div class="d-table">
@@ -36,7 +38,7 @@
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
             <a href="index.html" class="logo">
-                <img src="assets/img/home-two/kaya-official.jpeg" alt="Logo" width="40" height="40">
+                <img src="{{URL::asset('assets/img/'.$companyProfile->logo)}}" alt="Kaya Logo" width="40" height="40">
             </a>
         </div>
 
@@ -45,33 +47,32 @@
             <div class="container-fluid ">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/home-two/kaya-official.jpeg" width="50" height="50" alt="Logo">
+                        <img src="{{URL::asset('assets/img/'.$companyProfile->logo)}}" width="50" height="50" alt="Kaya Logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="{{ URL('/') }}" class="nav-link dropdown-toggle">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{URL('about')}}" class="nav-link">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Join <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="services.html" class="nav-link">Transporter</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="service-details.html" class="nav-link">Individual</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ URL('blog') }}" class="nav-link dropdown-toggle">Learn</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ URL('contact-us') }}" class="nav-link">Contact</a>
-                            </li>
+                            @foreach($menuItems as $key=> $menu)
+                                <li class="nav-item">
+                                    <a href="{{ URL($menu->url_path) }}" class="nav-link dropdown-toggle">
+                                        {{ $menu->application_name }}
+                                        <?php
+                                            if($menu->has_children == TRUE) { ?>
+                                                <i class='bx bx-chevron-down'></i>
+                                        <?php } ?>
+                                    </a>
+                                    <?php if($menu->has_children == TRUE) { ?>
+                                    <ul class="dropdown-menu">
+                                        @foreach($childLinks as $item)
+                                            @if($item->site_application_id == $menu->id)
+                                                <li class="nav-item">
+                                                    <a href="{{ URL($item->url_path) }}" class="nav-link">{{ $item->application_name }}</a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                    <?php } ?>
+                                </li>
+                            @endforeach
                         </ul>
                         <div class="side-nav">
                             <ul>
@@ -93,7 +94,7 @@
                                     <div class="call">
                                         <i class='bx bxs-phone-call'></i>
                                         <span>Call Now</span>
-                                        <a href="tel:+2348022440810">+234 (802) 244-0810</a>
+                                        <a href="tel:{{ $companyProfile->phone_no_one }}">{{ $companyProfile->phone_no_one }}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -117,29 +118,29 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src="assets/img/home-two/kaya-official.jpeg" width="50" height="50" alt="Logo">
+                    <img src="{{URL::asset('assets/img/'.$companyProfile->logo)}}" width="50" height="50" alt="Logo">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                    <p>{!! $companyProfile->our_history !!}</p>
                     <div class="contact-area">
                         <h2>Contact Us</h2>
                         <ul>
                             <li>
                                 <i class='flaticon-placeholder'></i>
-                                <span>3A Gbenga Ademulegun Lane, Parkview, Ikoyi, Lagos, Nigeria.</span>
+                                <span>{{ $companyProfile->address }}</span>
                             </li>
                             <li>
                                 <i class='flaticon-email'></i>
-                                <span>Mail: <a href="mailto:hello@tranx.com">info@kayaafrica.co</a></span>
-                                <span>Gmail: <a href="mailto:tranx@gmail.com">support@kayaafrica.co</a></span>
+                                <span>Admin: <a href="mailto:{{ $companyProfile->email_one }}">{{ $companyProfile->email_one }}</a></span>
+                                <span>Support: <a href="mailto:{{ $companyProfile->email_two }}">{{ $companyProfile->email_two }}</a></span>
                             </li>
                             <li>
                                 <i class='flaticon-call'></i>
-                                <span>Phone: <a href="tel:+15143125678">+234 (802) 244-0810</a></span>
-                                <span>Phone: <a href="tel:+15143126688">+234 (802) 244-0810</a></span>
+                                <span>Phone: <a href="tel:{{ $companyProfile->phone_no_one }}">{{ $companyProfile->phone_no_one }}</a></span>
+                                <span>Phone: <a href="tel:{{ $companyProfile->phone_no_two }}">{{ $companyProfile->phone_no_two }}</a></span>
                             </li>
                         </ul>
                     </div>
@@ -209,6 +210,7 @@
     </div>
     <!-- End Sidebar Modal -->
 
+
     @yield('main')
 
 
@@ -219,17 +221,18 @@
                     <div class="footer-item">
                         <div class="footer-logo">
                             <a href="index.html">
-                                <img src="assets/img/logo-two.png" alt="Logo">
+                                <!-- <img src="assets/img/logo-two.png" alt="Logo"> -->
+                                <img src="assets/img/kaya-official.jpeg" width="80" height="80" alt="Kaya Logo" style="margin-top:-50px">
                             </a>
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit</p>
+                            <p>Aggregating Cargo Owners, Clients and Transporters to satisfy end users</p>
                             <ul>
                                 <li>
                                     <i class='bx bx-location-plus'></i>
-                                    <span>6890 Blvd, The Bronx, NY 1058 New York, USA</span>
+                                    <span>3A Gbenga Ademulegun Lane, Park View, Ikoyi, Lagos.</span>
                                 </li>
                                 <li>
                                     <i class='bx bx-mail-send'></i>
-                                    <a href="mailto:hello@tranx.com">hello@tranx.com</a>
+                                    <a href="mailto:hello@tranx.com">support@kayaafrica.co</a>
                                 </li>
                                 <li>
                                     <i class='bx bx-phone-call'></i>
@@ -294,7 +297,7 @@
                     <div class="footer-item">
                         <div class="footer-touch">
                             <h3>Get in touch</h3>
-                            <p>Get Business news, tip and solutions to your problems from our </p>
+                            <p>Get Cargo & Logistic Tip and solutions to your problems from our platform</p>
                             <form class="newsletter-form" data-toggle="validator">
                                 <input type="email" class="form-control" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
         

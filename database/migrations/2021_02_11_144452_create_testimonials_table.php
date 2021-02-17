@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFinancialReportsTable extends Migration
+class CreateTestimonialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateFinancialReportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('financial_reports', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('tbl_kat_testimonials', function (Blueprint $table) {
+            $table->bigIncrements('id')->unsigned();
+            $table->string('full_name');
+            $table->string('designation');
+            $table->text('comment');
+            $table->string('photo');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateFinancialReportsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('financial_reports');
+        Schema::dropIfExists('tbl_kat_testimonials');
     }
 }

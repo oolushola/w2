@@ -1765,7 +1765,7 @@ button:focus {
 /*----- Client CSS -----*/
 .client-area {
   position: relative;
-  background-image: url("../img/home-one/client-bg.jpg");
+  background-image: url("../img/testimonial-banner.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

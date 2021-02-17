@@ -44,7 +44,7 @@
                     <div class="about-content">
                         <div class="section-title">
                             <span class="sub-title">About Company</span>
-                            <h2>Kaya is the largest transport and logistics company in the world</h2>
+                            <h2>Kaya is a fast rising tech logistic firm with a niche for excellence. </h2>
                         </div>
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -104,7 +104,7 @@
                     <div class="work-left">
                         <div class="section-title">
                             <span class="sub-title">Why Choose Us</span>
-                            <h2>Explore our main goals for business</h2>
+                            <h2>With our Technology</h2>
                         </div>
                         <ul>
                             <li>
@@ -114,17 +114,12 @@
                             </li>
                             <li>
                                 <i class="flaticon-eye"></i>
-                                <h3>Specialized care</h3>
+                                <h3>24/7 Visibility</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                             </li>
                             <li>
                                 <i class="flaticon-shield-border"></i>
-                                <h3>Border crossings</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            </li>
-                            <li>
-                                <i class="flaticon-security-purposes"></i>
-                                <h3>Reliable shipping</h3>
+                                <h3>Customer Service</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                             </li>
                         </ul>
@@ -136,34 +131,34 @@
                             <div class="counter-item one">
                                 <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                                 <h3>
-                                    <span class="odometer" data-count="99">00</span> 
+                                    <span class="odometer" data-count="4520">00</span> 
                                 </h3>
-                                <p>Vehicles</p>
+                                <p>Cargo Delivered</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item">
                                 <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                                 <h3>
-                                    <span class="odometer" data-count="420">00</span> 
+                                    <span class="odometer" data-count="22">00</span> 
                                 </h3>
-                                <p>Active customer</p>
+                                <p>Happy Clients</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item">
                                 <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                                 <h3>
-                                    <span class="odometer" data-count="107">00</span> 
+                                    <span class="odometer" data-count="1590">00</span> 
                                 </h3>
-                                <p>Team member</p>
+                                <p>Trucks</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item two">
                                 <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                                 <h3>
-                                    <span class="odometer" data-count="19">00</span> 
+                                    <span class="odometer" data-count="2">00</span> 
                                 </h3>
                                 <p>Years experience</p>
                             </div>
@@ -174,16 +169,6 @@
         </div>
     </section>
     <!-- End Work -->
-
-    <!-- Video -->
-    <div class="video-area ptb-100">
-        <img src="assets/img/about-main.jpg" alt="Work">
-        <a class="popup-youtube" href="https://www.youtube.com/watch?v=aHez0eBJEGw">
-            <i class="flaticon-video-player"></i>
-        </a>
-    </div>
-    <!-- End Video -->
-
 @stop
 
         

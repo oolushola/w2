@@ -21,7 +21,8 @@ Route::get('contact-us', 'FrontendController@contact');
 // Backend Naviagtions
 Route::get('login', 'AdminController@login');
 Route::get('admin/dashboard', 'AdminController@dashboard');
-Route::get('admin/company-profile', 'CompanyProfileController@index');
+Route::resource('admin/company-profile', 'CompanyProfileController');
 Route::resource('admin/testimonial', 'FeedbackController');
 Route::resource('admin/site-application', 'SiteApplicationController');
 Route::resource('admin/services', 'ServicesController');
+Route::resource('admin/gallery', 'GalleryController');

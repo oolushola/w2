@@ -2,8 +2,7 @@
 
 @section('title') Kaya Africa Technology ::. Moving Africa @stop
 
-@section('main')
-        
+@section('main')    
     <!-- Banner -->
     <div class="banner-area">
         <div class="banner-slider owl-theme owl-carousel">
@@ -25,22 +24,20 @@
         <div class="banner-social">
             <ul>
                 <li>
-                    <a href="#" target="_blank">FACEBOOK</a>
+                    <a href="https://www.facebook.com/{{$companyProfile->facebook}}" target="_blank">FACEBOOK</a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">INSTAGRAM</a>
+                    <a href="https://www.instagram.com/{{$companyProfile->instagram}}" target="_blank">INSTAGRAM</a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">TWITTER</a>
+                    <a href="https://www.twitter.com/{{$companyProfile->twitter}}" target="_blank">TWITTER</a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">LINKDIN</a>
+                    <a href="https://www.linkdin.com/{{$companyProfile->linkdin}}" target="_blank">LINKDIN</a>
                 </li>
             </ul>
         </div>
     </div>
-    
-    <!-- End Banner -->
 
     <!-- Feature -->
     <div class="feature-area two pt-100 pb-70">
@@ -89,7 +86,7 @@
                     <div class="about-content">
                         <div class="section-title">
                             <span class="sub-title">About Company</span>
-                            <h2>Kaya Africa is the largest transport and logistics company in Africa</h2>
+                            <h2>Kaya is a fast rising tech logistics firm with a niche for excellence.</h2>
                         </div>
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -104,34 +101,16 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                                <ul>
-                                    <li>At vero eos et accusam et justo duo dolores et ea rebum.</li>
-                                    <li>Stet clita kasd gubergren, no sea takimata sanctus.</li>
-                                    <li>Tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-                                    <li>Risus commodo viverra maecenas accumsan lacus vel facilisis. </li>
-                                </ul>
-                                <a class="cmn-btn" href="#">Read More</a>
+                                {!! $companyProfile->our_history !!}
+                                <a class="cmn-btn" href="{{URL('about')}}">Explore</a>
                             </div>
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                                <ul>
-                                    <li>At vero eos et accusam et justo duo dolores et ea rebum.</li>
-                                    <li>Stet clita kasd gubergren, no sea takimata sanctus.</li>
-                                    <li>Tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-                                    <li>Risus commodo viverra maecenas accumsan lacus vel facilisis. </li>
-                                </ul>
-                                <a class="cmn-btn" href="#">Read More</a>
+                                {!! $companyProfile->our_vision !!}
+                                <a class="cmn-btn" href="{{URL('about')}}">Explore</a>
                             </div>
                             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                                <ul>
-                                    <li>At vero eos et accusam et justo duo dolores et ea rebum.</li>
-                                    <li>Stet clita kasd gubergren, no sea takimata sanctus.</li>
-                                    <li>Tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-                                    <li>Risus commodo viverra maecenas accumsan lacus vel facilisis. </li>
-                                </ul>
-                                <a class="cmn-btn" href="#">Read More</a>
+                                {!! $companyProfile->our_mission !!}
+                                <a class="cmn-btn" href="{{URL('about')}}">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -151,14 +130,14 @@
                         <h3>
                             <span class="odometer" data-count="4520">00</span> 
                         </h3>
-                        <p>Successful Cargo Deliveries</p>
+                        <p>Cargo Delivered</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="counter-item">
                         <img src="assets/img/home-one/counter-shape.png" alt="Counter">
                         <h3>
-                            <span class="odometer" data-count="18">00</span> 
+                            <span class="odometer" data-count="22">00</span> 
                         </h3>
                         <p>Happy Clients</p>
                     </div>
@@ -192,23 +171,23 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="work-left">
-                        <h2>Who we are</h2>
-                        <span>We are a technology enabled logistics and supply chain solutions company that offers superior value services to both transporters and cargo owners. </span>
+                        <h2>Our Drive</h2>
+                        <span>Since 2019, Kaya has delivered world-class supply chain solutions, responsibly and safely. Today, Kaya is among the top three largest truckload carriers in Nigeria, and a transportation and logistics leader.</span>
                         <ul>
                             <li>
                                 <i class="flaticon-transport"></i>
-                                <h3>Enter your product</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                                <h3>Unrivaled Capacity</h3>
+                                <p>With our nationwide truckload capacity, your immediate and complex truckload needs will be fulfilled with our breadth and flexibility of services through the surges and ever-changing freight market.</p>
                             </li>
                             <li>
-                                <i class="flaticon-credit-card"></i>
-                                <h3>Cargo Aggregation</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                                <i class="flaticon-security-purposes"></i>
+                                <h3>Extra Helping Hands You Can Count On</h3>
+                                <p>We are committed to being a true partner to all our businesses, providing your company with the benefits of Kaya's experience, expertise, and resources necessary to achieve excellence. We understand your needs are unique and require a specifically designed solution.</p>
                             </li>
                             <li>
                                 <i class="flaticon-international-delivery"></i>
-                                <h3>Local & Up Country Deliveries</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                                <h3>Industry Safety Leader</h3>
+                                <p>Ranked as one of Nigeria's safest fleets, our commitment to safety is a commitment to the welfare of our employees and the community. </p>
                             </li>
                         </ul>
                     </div>
@@ -345,60 +324,17 @@
         </div>
         <div class="container">
             <div class="client-slider owl-theme owl-carousel">
+                @foreach($testimonials as $testimonial)
                 <div class="client-item">
                     <i class="flaticon-right-quote"></i>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
+                    <p>“{{ $testimonial->comment }}”</p>
                     <div class="client-top">
-                        <img src="assets/img/home-one/client1.png" alt="Client">
-                        <h3>Jeffrey E. Nicolas</h3>
-                        <span>CEO, ABC Inc.</span>
+                        <img src="{{URL::asset('assets/img/testimonial/'.$testimonial->photo.'')}}" alt="Client {{$testimonial->full_name}}"  style="border-radius:100%">
+                        <h3>{{ $testimonial->full_name }}</h3>
+                        <span>{{ $testimonial->designation }}</span>
                     </div>
                 </div>
-                <div class="client-item">
-                    <i class="flaticon-right-quote"></i>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-                    <div class="client-top">
-                        <img src="assets/img/home-one/client2.png" alt="Client">
-                        <h3>Gloria Williams</h3>
-                        <span>Manager</span>
-                    </div>
-                </div>
-                <div class="client-item">
-                    <i class="flaticon-right-quote"></i>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-                    <div class="client-top">
-                        <img src="assets/img/home-one/client1.png" alt="Client">
-                        <h3>Jeffrey E. Nicolas</h3>
-                        <span>CEO, ABC Inc.</span>
-                    </div>
-                </div>
-                <div class="client-item">
-                    <i class="flaticon-right-quote"></i>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-                    <div class="client-top">
-                        <img src="assets/img/home-one/client2.png" alt="Client">
-                        <h3>Gloria Williams</h3>
-                        <span>Manager</span>
-                    </div>
-                </div>
-                <div class="client-item">
-                    <i class="flaticon-right-quote"></i>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-                    <div class="client-top">
-                        <img src="assets/img/home-one/client1.png" alt="Client">
-                        <h3>Jeffrey E. Nicolas</h3>
-                        <span>CEO, ABC Inc.</span>
-                    </div>
-                </div>
-                <div class="client-item">
-                    <i class="flaticon-right-quote"></i>
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-                    <div class="client-top">
-                        <img src="assets/img/home-one/client2.png" alt="Client">
-                        <h3>Gloria Williams</h3>
-                        <span>Manager</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
